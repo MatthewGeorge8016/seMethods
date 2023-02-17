@@ -5,4 +5,4 @@
 
 [![Releases](https://img.shields.io/github/release/MatthewGeorge8016/seMethods/all.svg?style=flat-square)](https://github.com/MatthewGeorge8016/seMethods/releases)
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/MatthewGeorge8016/seMethods/A%20workflow%20for%20my%20Hello%20World%20App/develop?style=flat-square)
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/MatthewGeorge8016/seMethods/main.yml?branch=develop)
