@@ -34,6 +34,7 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
+                // con = DriverManager.getConnection("jdbc:mysql://localhost:33060/employees?useSSL=false", "root", "example");
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
@@ -101,6 +102,20 @@ public class App
             return null;
         }
     }
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
     public static void main(String[] args)
     {
         // Create new Application
@@ -108,6 +123,10 @@ public class App
 
         // Connect to database
         a.connect();
+        // Get Employee
+        Employee emp = a.getEmployee(255530);
+        // Display results
+        a.displayEmployee(emp);
 
         // Disconnect from database
         a.disconnect();
